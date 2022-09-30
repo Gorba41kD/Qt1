@@ -15,7 +15,7 @@ int main(int argc, char **argv)
     wgt.show();
     lbl.show();
     Counter counter;
-    QObject::connect(&cmd,SIGNAL(clicked()),&counter,SLOT(slotInfo()));
+    QObject::connect(&cmd,SIGNAL(clicked()),&counter,SLOT(slotInfo()));//
     QObject::connect(&counter,SIGNAL(changed(QString)),&lbl,SLOT(setText(QString)));
     return a.exec();
 }
